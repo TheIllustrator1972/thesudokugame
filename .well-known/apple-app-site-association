@@ -1,0 +1,13 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "35CMPLCA2N.theIllustrator.SudukoGame",
+        "paths": [
+          "/joinGame"
+        ]
+      }
+    ]
+  }
+}

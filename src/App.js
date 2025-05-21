@@ -1,6 +1,6 @@
 import "./App.css";
 import React from "react";
-import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import JoinGamePage from "./Pages/JoinGamePage";
 import PrivacyPolicyPage from "./Pages/PrivacyPolicyPage";
 import HomePage from "./Pages/HomePage";

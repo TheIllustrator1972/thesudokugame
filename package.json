@@ -1,7 +1,7 @@
 {
   "name": "sudoku_game_landing_page",
   "version": "0.1.0",
-  "homepage": "https://thesudokugame.com",
+  "homepage": "https://github.com/TheIllustrator1972/thesudokugame",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.14.0",

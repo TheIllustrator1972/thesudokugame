@@ -86,7 +86,7 @@ const classes = {
   },
   headLine: {
     color: "white",
-    fontSize: { sm: "36px", md: "38px", lg: "40px" },
+    fontSize: { sm: "24px", md: "32px", lg: "40px" },
     fontWeight: "bold",
     fontFamily: "monospace",
     textAlign: "center",
@@ -128,7 +128,7 @@ function HomePage() {
     } else {
       return screenshots.map((_, index) => index);
     }
-  }, [isXs, isSmMd, screenshots]); // Recalculate if these dependencies change
+  }, [isXs, isSmMd]);
 
   const visibleScreenshots = screenshots.filter((_, index) =>
     screenshotVisibilityMap.includes(index)
@@ -169,14 +169,14 @@ function HomePage() {
               style={{
                 width: "100%",
                 maxWidth: 250,
-                maxHeight: 400,
+                maxHeight: 450,
                 borderRadius: 8,
               }}
             />
           ))}
         </Stack>
 
-        <Stack sx={{ alignItems: "center", justifyContent: "center" }}>
+        <Stack sx={{ alignItems: "center", justifyContent: "center", gap: 2 }}>
           <Typography sx={classes.headLine}>
             "Sudoku Just Got Competitive."
           </Typography>

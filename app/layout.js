@@ -1,5 +1,5 @@
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+// import "./globals.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -12,6 +12,7 @@ const geistMono = Geist_Mono({
 });
 
 import "./globals.css"; // Make sure your global CSS is imported here
+import MuiThemeProvider from "./MuiThemeProvider";
 
 // Define your metadata object
 export const metadata = {
@@ -66,8 +67,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
+      <body>
+        <MuiThemeProvider>{children}</MuiThemeProvider>
       </body>
     </html>
   );

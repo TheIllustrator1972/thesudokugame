@@ -161,7 +161,7 @@ function Home() {
           </Stack>
         </Stack>
 
-        <Stack direction="row" spacing={4}>
+        <Stack direction="row" sx={{ gap: 3 }}>
           {visibleScreenshots.map((screenshot) => (
             <img
               key={screenshot.name}
@@ -170,7 +170,7 @@ function Home() {
               style={{
                 width: "100%",
                 maxWidth: 250,
-                maxHeight: 450,
+                maxHeight: 400,
                 borderRadius: 8,
               }}
             />

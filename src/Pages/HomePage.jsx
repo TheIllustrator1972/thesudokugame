@@ -1,7 +1,7 @@
-import { Stack, Typography, useMediaQuery, useTheme } from "@mui/material";
-import EmailIcon from "@mui/icons-material/Email";
+import { Box, Stack, Typography, useMediaQuery, useTheme } from "@mui/material";
 import { Email } from "@mui/icons-material";
 import { useMemo } from "react";
+import DownloadOnTheAppStore from "../DownloadOnTheAppStore";
 
 const classes = {
   container: {
@@ -38,17 +38,30 @@ const classes = {
     gap: 2,
   },
   appLogoStyles: {
-    width: "50px",
-    height: "50px",
     borderRadius: "5%",
+    width: "100%",
+    height: "100%",
+    objectFit: "contain",
+  },
+  logoContainer: {
+    width: {
+      xs: "28px",
+      md: "32px",
+      xl: "40px",
+    },
+    height: {
+      xs: "28px",
+      md: "32px",
+      xl: "40px",
+    },
   },
   appTitle: {
     color: "white",
     fontSize: {
-      xs: "28px",
-      sm: "24px",
-      md: "32px",
-      lg: "36px",
+      xs: "18px",
+      sm: "20px",
+      md: "24px",
+      lg: "32px",
       xl: "40px",
     },
     fontWeight: "bold",
@@ -56,7 +69,7 @@ const classes = {
   },
   contactUs: {
     display: "flex",
-    flexDirection: { sm: "column", md: "row" },
+    flexDirection: { md: "column", lg: "row" },
     gap: { sm: 1, md: 2 },
   },
   contactUsText: {
@@ -126,11 +139,14 @@ function HomePage() {
       <Stack sx={classes.contentContainer}>
         <Stack sx={classes.topBarContainer}>
           <Stack sx={classes.logoAndTitleContainer}>
-            <img
-              src={"/Logo.png"}
-              alt="Versus Sudoku Logo"
-              style={classes.appLogoStyles}
-            />
+            <Box sx={classes.logoContainer}>
+              <img
+                src={"/Logo.png"}
+                alt="Versus Sudoku Logo"
+                style={classes.appLogoStyles}
+              />
+            </Box>
+
             <Typography sx={classes.appTitle}>Versus Sudoku</Typography>
           </Stack>
           <Stack sx={classes.contactUs}>
@@ -150,7 +166,12 @@ function HomePage() {
               key={screenshot.name}
               src={`/AppScreenshots/${screenshot.name}.png`}
               alt={screenshot.alt}
-              style={{ width: "100%", maxWidth: 250, borderRadius: 8 }}
+              style={{
+                width: "100%",
+                maxWidth: 250,
+                maxHeight: 400,
+                borderRadius: 8,
+              }}
             />
           ))}
         </Stack>
@@ -159,9 +180,13 @@ function HomePage() {
           <Typography sx={classes.headLine}>
             "Sudoku Just Got Competitive."
           </Typography>
-          <Typography sx={classes.comingSoon}>
-            Coming Soon on the App Store
-          </Typography>
+          <a
+            href="https://apple.co/3Hplkx6"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <DownloadOnTheAppStore />
+          </a>
         </Stack>
       </Stack>
     </Stack>

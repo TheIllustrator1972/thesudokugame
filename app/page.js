@@ -1,7 +1,8 @@
+"use client";
 import { Box, Stack, Typography, useMediaQuery, useTheme } from "@mui/material";
 import { Email } from "@mui/icons-material";
 import { useMemo } from "react";
-import DownloadOnTheAppStore from "../DownloadOnTheAppStore";
+import DownloadOnTheAppStore from "./DownloadOnTheAppStore";
 
 const classes = {
   container: {
@@ -115,7 +116,7 @@ const screenshots = [
   },
 ];
 
-function HomePage() {
+function Home() {
   const theme = useTheme();
   const isXs = useMediaQuery(theme.breakpoints.down("sm")); // True for xs only
   const isSmMd = useMediaQuery(theme.breakpoints.between("sm", "lg")); // True for sm and md
@@ -193,4 +194,4 @@ function HomePage() {
   );
 }
 
-export default HomePage;
+export default Home;

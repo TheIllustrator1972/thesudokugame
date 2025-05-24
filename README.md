@@ -1,1 +1,1 @@
-# Landing Page for the Sudoku Game
+## Repo for Landing page of github pages

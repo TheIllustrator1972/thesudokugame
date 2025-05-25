@@ -11,11 +11,12 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-import "./globals.css";
+import "./globals.css"; // Make sure your global CSS is imported here
 import MuiThemeProvider from "./MuiThemeProvider";
 
+// Define your metadata object
 export const metadata = {
-  title: "Versus Sudoku",
+  title: "Versus Sudoku", // Default title for your application
   description:
     "Challenge your friends in a battle of logic and numbers with Versus Sudoku.",
   icons: {

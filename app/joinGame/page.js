@@ -46,10 +46,11 @@ const JoinGamePage = () => (
         fontSize: "24px",
         fontWeight: "bold",
         textAlign: "center",
+        maxWidth: "600px",
       }}
     >
-      If you want to play with your friends, please download the app from the
-      App Store.
+      If you want to play with your friend, please paste the link in app or
+      download the app from the App Store.
     </Typography>
     <a
       href="https://apple.co/3Hplkx6"
